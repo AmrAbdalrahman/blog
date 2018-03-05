@@ -19,11 +19,10 @@ class HomeController extends Controller
 
     }
 
-
+    // get the article by id
     public function getArticleById($id)
     {
-        $article = Article::where('id','=',$id)->first();
-      //  dd($article);
+        $article = Article::findOrFail($id);
         return view('partial.article', compact('article'));
 
     }

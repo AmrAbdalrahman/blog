@@ -30,7 +30,7 @@ Route::resource('article-ajax', 'articleAjaxController');
 Route::get('/', 'HomeController@index');
 
 
-//get article by is
+//get article by id
 Route::get('/article/{id?}', 'HomeController@getArticleById');
 
 
