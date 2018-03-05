@@ -14,7 +14,7 @@
 
 
 <div class="container">
-    <a href="{{'/'}}" class="btn btn-success">Back to home</a>
+    <a href="{{url('/')}}" class="btn btn-success">Back to home</a>
     <br>
     <br>
 
@@ -134,7 +134,7 @@
 <script type="text/javascript">
     var url = "<?php echo route('article-ajax.index')?>";
 </script>
-<script src="/dashboard/js/article-ajax.js"></script>
+<script src="{{url('/dashboard/js/article-ajax.js')}}"></script>
 
 
 </body>

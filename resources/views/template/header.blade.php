@@ -25,6 +25,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse-2">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{url('/')}}">Home</a></li>
+
                     @if (Auth::guest())
                     <li><a href="{{url('/auth/register')}}">Register</a></li>
 
@@ -32,6 +33,10 @@
                         <a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
                     </li>
                     @else
+
+                        @if(Auth::user()->admin == 1)
+                            <li><a href="{{url('/manage-articles')}}">Go to Dashboard</a></li>
+                        @endif
                         <li class="dropdown">
                             <a class="cf" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>

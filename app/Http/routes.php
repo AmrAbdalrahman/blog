@@ -17,8 +17,8 @@
  */
 
 Route::group(['middleware' => ['auth','adminAuth']], function (){
-Route::get('manage-articles', 'articleAjaxController@managearticleAjax');
-Route::resource('article-ajax', 'articleAjaxController');
+Route::get('manage-articles', 'ArticleAjaxController@managearticleAjax');
+Route::resource('article-ajax', 'ArticleAjaxController');
 });
 
 

@@ -11,7 +11,7 @@
                     <h3 class="panel-title">Register</h3>
                 </div>
                 <div class="panel-body">
-                    <form method="POST" action="/auth/register">
+                    <form method="POST" action="{{url('/auth/register')}}">
                         {!! csrf_field() !!}
                         <fieldset>
                             <div class="form-group">
